@@ -1,12 +1,17 @@
 import React from "react";
 import "./sass/App.scss";
+import Header from "./components/Header";
+import Routes from "./components/Routes";
+import Footer from "./components/Footer";
 
-function App() {
+import { BrowserRouter as Router } from "react-router-dom";
+
+export default function App() {
   return (
-    <div className="app-title">
-      <h1>Hello</h1>
-    </div>
+    <Router>
+      <Header />
+      <Routes />
+      <Footer />
+    </Router>
   );
 }
-
-export default App;
