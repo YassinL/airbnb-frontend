@@ -6,7 +6,7 @@ export default function Places() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("http://localhost:4000/api/places");
+      const result = await axios("api/places");
       setPlaces(result.data);
     };
 
@@ -18,7 +18,7 @@ export default function Places() {
       {places.map((place) => (
         <Fragment>
           <h1 key={place.id}>{place.name}</h1>
-          <h2>{place.idCity}</h2>
+          <h2>{place["City.name"]}</h2>
           <p dangerouslySetInnerHTML={{ __html: place.description }} />
           {/* <Link to={`/posts/${post.id}`}>View Book</Link> */}
         </Fragment>
