@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 
 export default function Places() {
@@ -15,10 +15,14 @@ export default function Places() {
   console.log("console log de places :", places);
   return (
     <div>
-      <h1>je suis les places</h1>
-      {/* {places.map(place => (
-
-      ))} */}
+      {places.map((place) => (
+        <Fragment>
+          <h1 key={place.id}>{place.name}</h1>
+          <h2>{place.idCity}</h2>
+          <p dangerouslySetInnerHTML={{ __html: place.description }} />
+          {/* <Link to={`/posts/${post.id}`}>View Book</Link> */}
+        </Fragment>
+      ))}
     </div>
   );
 }
