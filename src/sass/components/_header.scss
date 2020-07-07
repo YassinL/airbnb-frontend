@@ -1,3 +1,28 @@
-.header-title {
-  color: white;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  img {
+    width: 10%;
+    height: 20vh;
+  }
+}
+nav {
+  ul {
+    display: flex;
+    padding: 2%;
+    li {
+      padding: 1rem;
+      list-style: none;
+      &:hover {
+        background-color: #f7f7f7;
+        border-radius: 25px;
+      }
+      .link {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
 }

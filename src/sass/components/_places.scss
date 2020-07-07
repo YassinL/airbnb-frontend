@@ -1,0 +1,9 @@
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  &-onePlace {
+    padding: 3%;
+    height: 20vh;
+    width: 20%;
+  }
+}

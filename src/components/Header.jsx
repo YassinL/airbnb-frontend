@@ -1,12 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Nav from "./Nav";
 import "../sass/components/_header.scss";
+import airbnbImage from "./image/airbnb.png";
 
 export default function Header() {
   return (
-    <div>
-      <h2 className="header-title">HEADER</h2>
-      <Nav />
-    </div>
+    <Fragment>
+      <header>
+        <img src={airbnbImage} alt="airbnbImage" />
+        <Nav />
+      </header>
+    </Fragment>
   );
 }

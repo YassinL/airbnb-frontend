@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import "../sass/components/_header.scss";
 
 export default function Nav() {
   return (
@@ -8,13 +9,24 @@ export default function Nav() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link className="link" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/places">Places</Link>
+              <Link className="link" to="/places">
+                Places
+              </Link>
             </li>
             <li>
-              <Link to="/signup">Signup</Link>
+              <Link className="link" to="/signup">
+                Signup
+              </Link>
+            </li>
+            <li>
+              <Link className="link signin" to="/signin">
+                Signin
+              </Link>
             </li>
           </ul>
         </nav>

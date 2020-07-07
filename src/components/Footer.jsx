@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import "../sass/components/_footer.scss";
 
 export default function Footer() {
   return (
-    <div>
-      <h2>FOOTER</h2>
-    </div>
+    <Fragment>
+      <footer>
+        <h2>footer</h2>
+      </footer>
+    </Fragment>
   );
 }

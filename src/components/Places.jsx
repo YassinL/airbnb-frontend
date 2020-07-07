@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../sass/components/_places.scss";
 
 export default function Places() {
   const [places, setPlaces] = useState([]);
@@ -15,13 +16,15 @@ export default function Places() {
   }, []);
   console.log("console log de places :", places);
   return (
-    <div>
+    <div className="places">
       {places.map((place, i) => (
         <Fragment>
-          <h1 key={i}>{place.name}</h1>
-          <h2>{place["City.name"]}</h2>
-          <p dangerouslySetInnerHTML={{ __html: place.description }} />
-          <Link to={`/places/${place.id}`}>Regardez cette appart</Link>
+          <div className="places-onePlace">
+            <h2 key={i}>{place.name}</h2>
+            <h3>{place["City.name"]}</h3>
+            <p dangerouslySetInnerHTML={{ __html: place.description }} />
+            <Link to={`/places/${place.id}`}>Regardez cette appart</Link>
+          </div>
         </Fragment>
       ))}
     </div>
