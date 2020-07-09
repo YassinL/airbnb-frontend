@@ -1,9 +1,22 @@
 .places {
   display: flex;
   flex-wrap: wrap;
-  &-onePlace {
-    padding: 3%;
-    height: 20vh;
+  justify-content: center;
+  img {
     width: 20%;
+  }
+  &-onePlace {
+    padding: 3% 3% 5% 3%;
+    max-height: 30vh;
+    max-width: 25%;
+    height: 30vh;
+    width: 25%;
+    border: 1px solid lightgray;
+    &-infos {
+      &-description {
+        text-overflow: ellipsis;
+        width: 80%;
+      }
+    }
   }
 }

@@ -14,7 +14,7 @@ export default function OnePlace() {
 
     fetchData();
   }, [id]);
-  console.log("console log de OnePlace :", OnePlace);
+
   return (
     <div>
       <Fragment>
