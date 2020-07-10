@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { Redirect } from "react-router-dom";
 
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState("");
@@ -24,7 +25,7 @@ const Search = (props) => {
         onChange={handleSearchInputChanges}
         type="text"
       />
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+      <input onClick={callSearchFunction} type="submit" />
     </form>
   );
 };
