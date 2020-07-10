@@ -1,28 +1,88 @@
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 3%;
-  img {
-    width: 10%;
-    height: 20vh;
-  }
-}
-nav {
-  ul {
     display: flex;
-    padding: 2%;
-    li {
-      padding: 1rem;
-      list-style: none;
-      &:hover {
-        background-color: #f7f7f7;
-        border-radius: 25px;
-      }
-      .link {
-        text-decoration: none;
-        color: #000;
-      }
+    flex-direction: column;
+    .container-logo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 10rem;
+        }
     }
-  }
+    .search {
+        .input1 {
+            border-radius: 5px;
+            height: 2rem;
+            width: 14rem;
+            margin: .4rem;
+            outline: none;
+            border: 1px solid black;
+        }
+        .input2 {
+            border-radius: 5px;
+            border: none;
+            background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100%) !important;
+            color: white;
+            height: 2rem;
+            width: 6rem;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    nav {
+        text-align: center;
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            text-align: center;
+            padding-bottom: 1rem;
+            li {
+                padding: .3rem;
+                .link {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    header {
+        .container-logo {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 7rem;
+            img {
+                width: 13rem;
+            }
+        }
+        .search {
+            padding-left: 49rem;
+            .input1 {
+                width: 20rem;
+                height: 2rem;
+                border: 1px solid black;
+            }
+            .input2 {
+                height: 2rem;
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 6.2rem;
+                li {
+                    padding: 1rem;
+                    &:hover {
+                        background-color: #F7F7F7;
+                        border-radius: 30px;
+                        color: white !important;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 }

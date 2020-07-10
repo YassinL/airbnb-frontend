@@ -10,7 +10,9 @@ export default function Header() {
     <Fragment>
       <header>
         {/* <Link to="/"> */}
+        <div className="container-logo">
         <img src={airbnbImage} alt="airbnbImage" />
+        </div>
         {/* </Link> */}
         <Nav />
       </header>

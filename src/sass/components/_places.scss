@@ -1,22 +1,29 @@
 .places {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  img {
-    width: 20%;
-  }
-  &-onePlace {
-    padding: 3% 3% 5% 3%;
-    max-height: 30vh;
-    max-width: 25%;
-    height: 30vh;
-    width: 25%;
-    border: 1px solid lightgray;
-    &-infos {
-      &-description {
-        text-overflow: ellipsis;
-        width: 80%;
-      }
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    .name {
+        text-decoration: none;
+        color: black;
     }
-  }
+    .imgAppart {
+        width: 21rem;
+        border-radius: 15px;
+    }
+    p {
+        padding-top: 1rem;
+    }
+    .paraBottom {
+        padding-bottom: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .places {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem;
+        img {
+            margin: 3rem;
+        }
+    }
 }

@@ -1,6 +1,6 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import axios from "axios";
-import { Link, Redirect, useLocation } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../sass/components/_header.scss";
 import Search from "./Search";
 
@@ -34,19 +34,6 @@ export default function Nav() {
         <nav>
           <ul>
             <li>
-              <Search search={search} />
-              {state ? (
-                <Redirect
-                  to={{
-                    pathname: `/places?city=${places.name}`,
-                    state: { places },
-                  }}
-                />
-              ) : (
-                <div>C'est pas bon</div>
-              )}
-            </li>
-            <li>
               <Link className="link" to="/">
                 Accueil
               </Link>
@@ -66,7 +53,22 @@ export default function Nav() {
                 Connexion
               </Link>
             </li>
+           
           </ul>
+          <div className='recherche'>
+          <Search search={search} />
+              {state ? (
+                <Redirect
+                  to={{
+                    pathname: `/places?city=${places.name}`,
+                    state: { places },
+                  }}
+                />
+              ) : (
+                <></>
+              )}
+          </div>
+            
         </nav>
       </div>
     </Fragment>

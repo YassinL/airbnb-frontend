@@ -1,5 +1,14 @@
-footer {
-  background-color: lightcoral;
-  height: 20vh;
-  width: 100%;
+.footer {
+    background-color: #F7F7F7;
+    border-top: 1px dotted black;
+    padding: .5rem;
+    p {
+        padding: .1rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .footer {
+        padding: 2rem 0 1rem 7rem;
+    }
 }
