@@ -1,10 +1,20 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "../sass/components/_footer.scss";
 
 export default function Footer() {
-  return (
-    <Fragment>
-      <footer></footer>
-    </Fragment>
-  );
+    return ( 
+        <div  className='footer'>
+        <footer>
+        <h5>À PROPOS</h5>
+        <p>Fonctionnement d'Airbnb</p>
+        <p>Diversité et intégration</p>
+        <p>Accessibilité</p>
+        <p>Confiance et sécurité</p>
+        <p>Airbnb Citizen</p>
+        <p>Jeux olympiques</p>
+        <p>Newsroom</p>
+            </footer> 
+            </div>
+        
+    );
 }

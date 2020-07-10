@@ -24,8 +24,15 @@ const Search = (props) => {
         value={searchValue}
         onChange={handleSearchInputChanges}
         type="text"
+        className="input1"
+        placeholder="Où allez-vous ?"
       />
-      <input onClick={callSearchFunction} type="submit" />
+      <input
+        onClick={callSearchFunction}
+        type="submit"
+        value="Rechercher"
+        className="input2"
+      />
     </form>
   );
 };

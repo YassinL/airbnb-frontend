@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import axios from "axios";
+
 import { Link, withRouter } from "react-router-dom";
 
 import "../sass/components/_header.scss";
@@ -18,9 +18,6 @@ function Nav(props) {
       <div>
         <nav>
           <ul>
-            <li>
-              <Search search={search} />
-            </li>
             <li>
               <Link className="link" to="/">
                 Accueil
@@ -46,6 +43,9 @@ function Nav(props) {
               </Link>
             </li>
           </ul>
+          <div className="recherche">
+            <Search search={search} />
+          </div>
         </nav>
       </div>
     </Fragment>
