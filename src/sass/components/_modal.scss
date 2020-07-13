@@ -1,0 +1,66 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-button {
+    outline: none;
+    border: none;
+    height: auto;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  &-container {
+    background-color: #ffff;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 10px;
+    overflow-y: scroll;
+    @include media(tablet) {
+      width: 45vw;
+    }
+    &-header {
+      padding: 5%;
+      text-align: center;
+      border-bottom: 1px solid lightgrey;
+    }
+    &-form {
+      padding: 5%;
+      input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid lightgrey;
+      }
+      button {
+        width: 100%;
+        padding: 3%;
+        margin-top: 10px;
+        border-radius: 7px;
+        border: none;
+        color: white;
+        background-image: radial-gradient(
+          circle at center,
+          #ff385c 0%,
+          #e61e4d 27.5%,
+          #e31c5f 40%,
+          #d70466 57.5%,
+          #bd1e59 75%,
+          #bd1e59 100%
+        );
+      }
+    }
+  }
+}
+
+.login {
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;
+  &:hover {
+    background-color: none;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState("");
@@ -12,11 +12,14 @@ const Search = (props) => {
     setSearchValue("");
   };
 
+  const history = useHistory();
   const callSearchFunction = (e) => {
     e.preventDefault();
     props.search(searchValue);
     resetInputField();
+    history.push('/places')
   };
+
 
   return (
     <form className="search">

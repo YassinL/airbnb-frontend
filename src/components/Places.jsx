@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "../sass/components/_places.scss";
 import ContextRecherche from "./Context";
 import appart from "./image/appart.jpg";
 
@@ -23,6 +22,7 @@ export default function Places() {
   return (
     <div className="places">
       {" "}
+      <div className="places-map">Map</div>
       {places.map((place, i) => (
         <div key={i} className="places-onePlace">
           <img src={appart} alt="appartImage" className="imgAppart" />
@@ -46,7 +46,7 @@ export default function Places() {
             <p>- Chambres: {place.rooms}</p>
             <p>- Salle de bains: {place.bathrooms}</p>
             <p>- Maximum de personnes: {place.maxGuests}</p>
-            <p className="paraBottom">
+            <p className="places-onePlace-infos-prix">
               - <b>{place.priceByNight}€</b> / nuits
             </p>
           </div>

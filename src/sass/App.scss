@@ -1,5 +1,7 @@
-@import './config/mixins.scss';
+@import "./config/mixins";
 @import "./base";
 @import "/components/header";
-@import '/components/home';
-@import '/components/footer';
+@import "/components/home";
+@import "/components/places";
+@import "/components/modal";
+@import "/components/footer";

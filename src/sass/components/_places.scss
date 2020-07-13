@@ -1,29 +1,50 @@
 .places {
-    padding: 1rem 1rem 1rem 1rem;
-    text-align: center;
-    .name {
-        text-decoration: none;
-        color: black;
-    }
-    .imgAppart {
-        width: 21rem;
-        border-radius: 15px;
-    }
-    p {
-        padding-top: 1rem;
-    }
-    .paraBottom {
-        padding-bottom: 1rem;
-    }
-}
+  padding: 1rem;
+  gap: 3rem;
 
-@media only screen and (min-width: 1025px) {
-    .places {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 2rem;
-        img {
-            margin: 3rem;
-        }
+  @include media(tablet) {
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+  }
+  @include media(desktop) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
+  &-map {
+    @include media(desktop) {
+      width: 40%;
+      height: 80vh;
+      position: fixed;
+      bottom: 0;
+      right: 0;
     }
+  }
+  &-onePlace {
+    width: 100%;
+    @include media(tablet) {
+      display: flex;
+      flex-direction: row;
+    }
+    @include media(desktop) {
+      width: 55%;
+    }
+    &-infos {
+      &-prix {
+        padding: 1%;
+      }
+    }
+  }
+  .name {
+    text-decoration: none;
+    color: black;
+  }
+  .imgAppart {
+    width: 21rem;
+    border-radius: 15px;
+  }
+  p {
+    padding-top: 1rem;
+  }
 }

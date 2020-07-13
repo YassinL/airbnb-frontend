@@ -2,8 +2,9 @@ import React, { Fragment, useContext } from "react";
 
 import { Link, withRouter } from "react-router-dom";
 
-import "../sass/components/_header.scss";
 import Search from "./Search";
+import ModalSignup from "./ModalSignup";
+import ModalSignin from "./ModalSignin";
 import ContextRecherche from "./Context";
 
 function Nav(props) {
@@ -33,20 +34,16 @@ function Nav(props) {
               </Link>
             </li>
             <li>
-              <Link className="link" to="/signup">
-                Inscription
-              </Link>
+              <ModalSignup className="link" />
             </li>
-            <li>
-              <Link className="link signin" to="/signin">
-                Connexion
-              </Link>
+            <li className="login">
+              <ModalSignin className="link" />
             </li>
           </ul>
-          <div className="recherche">
-            <Search search={search} />
-          </div>
         </nav>
+        <div className="recherche">
+          <Search search={search} />
+        </div>
       </div>
     </Fragment>
   );
