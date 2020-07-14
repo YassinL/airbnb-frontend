@@ -23,10 +23,13 @@ export default function useSignupForm(callback) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await axios({
-      method: "post",
-      url: "http://localhost:4000/api/signup",
-    });
+    await axios.post(`http://localhost:4000/api/signup`, inputs);
+    message();
+  };
+
+  const message = () => {
+    // eslint-disable-next-line no-alert
+    alert("Tu es bien inscrit !");
   };
 
   return {

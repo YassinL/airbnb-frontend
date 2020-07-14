@@ -4,9 +4,6 @@ import useSignUpForm from "./useSignupForm";
 
 export default function ModaleSignup() {
   const { inputs, handleInputChange, handleSubmit } = useSignUpForm();
-  // console.log("console log de inputs", inputs);
-  // console.log("console log de handleinputchange", handleInputChange);
-  // console.log("console log de handlesubmit", handleSubmit);
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
