@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Modal from "@material-ui/core/Modal";
+import useSignUpForm from "./useSignupForm";
 
 export default function ModaleSignup() {
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm();
+  // console.log("console log de inputs", inputs);
+  // console.log("console log de handleinputchange", handleInputChange);
+  // console.log("console log de handlesubmit", handleSubmit);
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -26,15 +31,68 @@ export default function ModaleSignup() {
       >
         <div className="modal-container">
           <h2 className="modal-container-header">Inscription</h2>
-          <form className="modal-container-form">
-            <input type="text" placeholder="Prénom" />
-            <input type="text" placeholder="Nom" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Mot de passe" />
-            <input type="text" placeholder="Ville" />
-            <input type="text" placeholder="Description" />
-            <input type="date" />
-            <input type="text" placeholder="Role" />
+          <form
+            className="modal-container-form"
+            onSubmit={handleSubmit}
+            noValidate
+            // method="POST"
+            // action="/api/signup"
+          >
+            <input
+              name="firstName"
+              onChange={handleInputChange}
+              value={inputs.firstName}
+              type="text"
+              placeholder="Prénom"
+            />
+            <input
+              name="lastName"
+              onChange={handleInputChange}
+              value={inputs.lastName}
+              type="text"
+              placeholder="Nom"
+            />
+            <input
+              name="email"
+              onChange={handleInputChange}
+              value={inputs.email}
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              name="password"
+              onChange={handleInputChange}
+              value={inputs.password}
+              type="password"
+              placeholder="Mot de passe"
+            />
+            <input
+              name="city"
+              onChange={handleInputChange}
+              value={inputs.city}
+              type="text"
+              placeholder="Ville"
+            />
+            <input
+              name="description"
+              onChange={handleInputChange}
+              value={inputs.descripton}
+              type="text"
+              placeholder="Description"
+            />
+            <input
+              name="birthday"
+              onChange={handleInputChange}
+              value={inputs.birthday}
+              type="date"
+            />
+            <input
+              name="role"
+              onChange={handleInputChange}
+              value={inputs.role}
+              type="text"
+              placeholder="Role"
+            />
             <button type="submit">Envoyer</button>
           </form>
         </div>

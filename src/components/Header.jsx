@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Nav from "./Nav";
 import "../sass/components/_header.scss";
@@ -9,9 +9,11 @@ export default function Header() {
   return (
     <Fragment>
       <header>
-        <div className="container-logo">
-          <img src={airbnbImage} alt="airbnbImage" />
-        </div>
+        <Link to="/">
+          <div className="container-logo">
+            <img src={airbnbImage} alt="airbnbImage" />
+          </div>
+        </Link>
         <Nav />
       </header>
     </Fragment>

@@ -41,9 +41,8 @@ function Nav(props) {
             </li>
           </ul>
         </nav>
-        <div className="recherche">
-          <Search search={search} />
-        </div>
+
+        <Search search={search} />
       </div>
     </Fragment>
   );

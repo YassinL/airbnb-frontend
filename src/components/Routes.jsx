@@ -4,7 +4,7 @@ import Places from "./Places";
 import OnePlace from "./OnePlace";
 
 import { Switch, Route } from "react-router-dom";
-import ModalSignup from "./ModalSignup";
+import ModaleSignup from "./ModalSignup";
 
 export default function Routes() {
   return (
@@ -16,7 +16,7 @@ export default function Routes() {
         <Places />
       </Route>
       <Route path="/signup">
-        <ModalSignup />
+        <ModaleSignup />
       </Route>
       <Route path="/">
         <Home />

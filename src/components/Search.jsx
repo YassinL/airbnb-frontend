@@ -17,24 +17,56 @@ const Search = (props) => {
     e.preventDefault();
     props.search(searchValue);
     resetInputField();
-    history.push('/places')
+    history.push("/places");
   };
 
-
   return (
+    // <form className="search">
+    //   <input
+    //     value={searchValue}
+    //     onChange={handleSearchInputChanges}
+    //     type="text"
+    //     className="input1"
+    //     placeholder="Où allez-vous ?"
+    //   />
+    //   <input
+    //     onClick={callSearchFunction}
+    //     type="submit"
+    //     value="Rechercher"
+    //     className="input2"
+    //   />
+    // </form>
     <form className="search">
-      <input
-        value={searchValue}
-        onChange={handleSearchInputChanges}
-        type="text"
-        className="input1"
-        placeholder="Où allez-vous ?"
-      />
+      <label htmlFor="" className="search-label">
+        Adresse
+        <input
+          value={searchValue}
+          onChange={handleSearchInputChanges}
+          type="search"
+          placeholder="Où allez-vous ?"
+        />
+      </label>
+
+      <label htmlFor="" className="search-label">
+        Arrivée
+        <input type="date" placeholder="Date d'arrivée        " />
+      </label>
+
+      <label htmlFor="" className="search-label">
+        Départ
+        <input type="date" placeholder="Date de départ        " />
+      </label>
+
+      <label htmlFor="" className="search-label">
+        Voyageurs
+        <input type="number" placeholder="Ajoutez des voyageurs" />
+      </label>
+
       <input
         onClick={callSearchFunction}
         type="submit"
         value="Rechercher"
-        className="input2"
+        className="search-submit"
       />
     </form>
   );
