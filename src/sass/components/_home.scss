@@ -1,160 +1,161 @@
 .accueilGénéral {
-  h1 {
-    font-size: 30px;
-    background: -webkit-linear-gradient(#bd1e59, #e31c5f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 1rem 0 1rem 1rem;
-    font-weight: 400;
-    @include media(desktop) {
-      font-size: 40px;
-      width: 43rem;
-      padding-left: 7rem;
-    }
-  }
-  .accueil {
-    display: flex;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: 1rem 0 3rem 1rem;
-    @include media(desktop) {
-      justify-content: center;
-    }
-    &-infos1 {
-      border-radius: 20px;
-      margin-right: 1rem;
-      background-color: #f4f4f4;
-      img {
-        width: 20rem;
-        border-radius: 20px;
+    h1 {
+        font-size: 30px;
+        background: -webkit-linear-gradient(#bd1e59, #e31c5f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 1rem 0 1rem 1rem;
+        font-weight: 400;
         @include media(desktop) {
-          width: 25rem;
+            font-size: 40px;
+            width: 43rem;
+            padding-left: 7rem;
         }
-      }
-      h3 {
-        padding: 0.3rem;
-      }
-      p {
-        padding: 0.4rem;
+    }
+    .accueil {
+        display: flex;
+        overflow: hidden;
+        overflow-x: scroll;
+        padding: 3%;
         @include media(desktop) {
-          width: 20.1rem;
+            justify-content: center;
         }
-      }
-    }
-    &-infos2 {
-      border-radius: 20px;
-      margin-right: 1rem;
-      background-color: #f4f4f4;
-      img {
-        width: 20rem;
-        border-radius: 20px;
-        @include media(desktop) {
-          width: 25rem;
+        &-infos1 {
+            border-radius: 20px;
+            margin-right: 1rem;
+            background-color: #f4f4f4;
+            padding: 1%;
+            img {
+                width: 20rem;
+                border-radius: 20px;
+                @include media(desktop) {
+                    width: 25rem;
+                }
+            }
+            h3 {
+                padding: 0.3rem;
+            }
+            p {
+                padding: 0.4rem;
+                @include media(desktop) {
+                    width: 20.1rem;
+                }
+            }
         }
-      }
-      h3 {
-        padding: 0.3rem;
-      }
-      p {
-        padding: 0.4rem;
-        @include media(desktop) {
-          width: 20.1rem;
+        &-infos2 {
+            border-radius: 20px;
+            margin-right: 1rem;
+            background-color: #f4f4f4;
+            img {
+                width: 20rem;
+                border-radius: 20px;
+                @include media(desktop) {
+                    width: 25rem;
+                }
+            }
+            h3 {
+                padding: 0.3rem;
+            }
+            p {
+                padding: 0.4rem;
+                @include media(desktop) {
+                    width: 20.1rem;
+                }
+            }
         }
-      }
-    }
-    &-infos3 {
-      border-radius: 20px;
-      background-color: #f4f4f4;
-      img {
-        width: 20rem;
-        border-radius: 20px;
-        @include media(desktop) {
-          width: 25rem;
+        &-infos3 {
+            border-radius: 20px;
+            background-color: #f4f4f4;
+            img {
+                width: 20rem;
+                border-radius: 20px;
+                @include media(desktop) {
+                    width: 25rem;
+                }
+            }
+            h3 {
+                padding: 0.3rem;
+            }
+            p {
+                padding: 0.4rem;
+                @include media(tablet) {
+                    width: 20.1rem;
+                }
+            }
         }
-      }
-      h3 {
-        padding: 0.3rem;
-      }
-      p {
-        padding: 0.4rem;
-        @include media(tablet) {
-          width: 20.1rem;
-        }
-      }
     }
-  }
-  .infosRecette {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    @include media(desktop) {
-      padding-left: 7rem;
-    }
-    h3 {
-      padding-bottom: 0.4rem;
-    }
-    p {
-      @include media(desktop) {
-        width: 48rem;
-      }
-    }
-  }
-  .accueil2 {
-    overflow: hidden;
-    overflow-x: scroll;
-    background-color: black;
-    color: white;
-    display: flex;
-    padding: 1rem;
-    @include media(desktop) {
-      padding-left: 7rem;
-    }
-    .accueil2-photo1 {
-      margin-right: 1rem;
-      border-radius: 10px;
-      background-color: #222323;
-      @include media(desktop) {
-        margin-right: 7rem;
-      }
-      img {
-        border-radius: 10px;
-      }
-      p {
+    .infosRecette {
+        background-color: black;
+        color: white;
         padding: 1rem;
         @include media(desktop) {
-          width: 20rem;
+            padding-left: 7rem;
         }
-      }
+        h3 {
+            padding-bottom: 0.4rem;
+        }
+        p {
+            @include media(desktop) {
+                width: 48rem;
+            }
+        }
     }
-    .accueil2-photo2 {
-      margin-right: 1rem;
-      border-radius: 10px;
-      background-color: #222323;
-      @include media(desktop) {
-        margin-right: 7rem;
-      }
-      img {
-        border-radius: 10px;
-      }
-      p {
+    .accueil2 {
+        overflow: hidden;
+        overflow-x: scroll;
+        background-color: black;
+        color: white;
+        display: flex;
         padding: 1rem;
         @include media(desktop) {
-          width: 20rem;
+            padding-left: 7rem;
         }
-      }
-    }
-    .accueil2-photo3 {
-      border-radius: 10px;
-      background-color: #222323;
-      img {
-        border-radius: 10px;
-      }
-      p {
-        padding: 1rem;
-        @include media(desktop) {
-          width: 20rem;
+        .accueil2-photo1 {
+            margin-right: 1rem;
+            border-radius: 10px;
+            background-color: #222323;
+            @include media(desktop) {
+                margin-right: 7rem;
+            }
+            img {
+                border-radius: 10px;
+            }
+            p {
+                padding: 1rem;
+                @include media(desktop) {
+                    width: 20rem;
+                }
+            }
         }
-      }
+        .accueil2-photo2 {
+            margin-right: 1rem;
+            border-radius: 10px;
+            background-color: #222323;
+            @include media(desktop) {
+                margin-right: 7rem;
+            }
+            img {
+                border-radius: 10px;
+            }
+            p {
+                padding: 1rem;
+                @include media(desktop) {
+                    width: 20rem;
+                }
+            }
+        }
+        .accueil2-photo3 {
+            border-radius: 10px;
+            background-color: #222323;
+            img {
+                border-radius: 10px;
+            }
+            p {
+                padding: 1rem;
+                @include media(desktop) {
+                    width: 20rem;
+                }
+            }
+        }
     }
-  }
 }

@@ -21,6 +21,25 @@ const Search = (props) => {
   };
 
   return (
+
+<div>
+  <form className='searchPhone'>
+        <input
+          value={searchValue}
+          onChange={handleSearchInputChanges}
+          type="search"
+          placeholder="Où allez-vous ?"
+          className='searchPhone-inputPhone'
+        />
+         <input
+        onClick={callSearchFunction}
+        type="submit"
+        value="&#10132;"
+        className="searchPhone-submit"
+      />
+  </form>
+
+
     <form className="search">
       <label htmlFor="" className="search-label">
         Adresse
@@ -34,17 +53,17 @@ const Search = (props) => {
 
       <label htmlFor="" className="search-label">
         Arrivée
-        <input type="date" placeholder="Date d'arrivée        " />
+        <input type="date" placeholder="Date d'arrivée"/>
       </label>
 
       <label htmlFor="" className="search-label">
         Départ
-        <input type="date" placeholder="Date de départ        " />
+        <input type="date" placeholder="Date de départ"/>
       </label>
 
       <label htmlFor="" className="search-label">
         Voyageurs
-        <input type="number" placeholder="Ajoutez des voyageurs" />
+        <input type="number" placeholder="Ajoutez des voyageurs"/>
       </label>
 
       <input
@@ -54,6 +73,7 @@ const Search = (props) => {
         className="search-submit"
       />
     </form>
+    </div>
   );
 };
 
