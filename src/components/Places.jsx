@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import ContextRecherche from "./Context";
+import ContextRecherche from "./Context/Context";
 import appart from "./image/appart.jpg";
 import GoogleMap from "./GoogleMap";
 

@@ -32,8 +32,6 @@ export default function ModaleSignup() {
             className="modal-container-form"
             onSubmit={handleSubmit}
             noValidate
-            // method="POST"
-            // action="/api/signup"
           >
             <input
               name="firstName"

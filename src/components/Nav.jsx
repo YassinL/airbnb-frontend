@@ -5,7 +5,7 @@ import { Link, withRouter } from "react-router-dom";
 import Search from "./Search";
 import ModalSignup from "./ModalSignup";
 import ModalSignin from "./ModalSignin";
-import ContextRecherche from "./Context";
+import ContextRecherche from "./Context/Context";
 
 function Nav(props) {
   const context = useContext(ContextRecherche);

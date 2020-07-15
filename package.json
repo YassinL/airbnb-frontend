@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "google-map-react": "^1.1.7",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

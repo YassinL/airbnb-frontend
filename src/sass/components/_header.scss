@@ -3,56 +3,12 @@ header {
   .container-logo {
     display: flex;
     height: 20vh;
-    width: 20vw;
-  }
-}
-nav {
-  padding: 2%;
-  display: flex;
-  text-align: center;
-  width: 85vw;
-  justify-content: flex-end;
-  align-items: center;
-  ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    text-align: center;
-    li {
-      padding: 0.3rem;
-      font-weight: 600;
-      color: #2f2222;
-      .link {
-        text-decoration: none;
-        color: #2f2222;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  header {
-    .container-logo {
+    width: 15vw;
+    @include media(tablet) {
       display: flex;
       justify-content: flex-start;
       width: 15vw;
       padding: 0 2%;
-    }
-
-    nav {
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 6.2rem;
-        li {
-          padding: 1rem;
-          &:hover {
-            background-color: #f7f7f7;
-            border-radius: 30px;
-            cursor: pointer;
-          }
-        }
-      }
     }
   }
 }

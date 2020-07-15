@@ -1,3 +1,40 @@
+nav {
+  padding: 2%;
+  display: flex;
+  text-align: center;
+  width: 85vw;
+  justify-content: flex-end;
+  align-items: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    @include media(desktop) {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 6.2rem;
+    }
+    li {
+      padding: 0.3rem;
+      font-weight: 600;
+      color: #2f2222;
+      @include media(desktop) {
+        padding: 1rem;
+        &:hover {
+          background-color: #f7f7f7;
+          border-radius: 30px;
+          cursor: pointer;
+        }
+      }
+      .link {
+        text-decoration: none;
+        color: #2f2222;
+      }
+    }
+  }
+}
+
 .search {
   display: flex;
   flex-direction: row;
@@ -17,7 +54,7 @@
   }
   &-submit {
     margin-left: 1%;
-    padding: 0 4%;
+    padding: 0 3%;
     color: #ffff;
     border-radius: 15px;
     cursor: pointer;
