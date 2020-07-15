@@ -3,37 +3,46 @@ import axios from "axios";
 import AuthContext from "./Context/Auth";
 
 export default function useSigninForm() {
-  const { dispatch } = useContext(AuthContext);
   const [connexion, setConnexion] = useState({
     email: "",
     password: "",
+    isSubmitting: false,
+    errorMessage: null,
   });
 
   const handleChange = (event) => {
-    event.persist();
+    const { name, value } = event.target;
     setConnexion((connexion) => ({
       ...connexion,
-      [event.target.name]: event.target.value,
+      [name]: value,
     }));
   };
 
-  const message = () => {
-    // eslint-disable-next-line no-alert
-    alert("Tu es bien connecté !");
-  };
+  const { dispatch } = useContext(AuthContext);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setConnexion({
-      ...connexion,
-    });
-    const result = await axios.post(
-      `http://localhost:4000/api/signin`,
-      connexion
-    );
-    dispatch({ type: "SIGNIN", payload: result });
-    console.log("result :", result.data);
-    message();
+    try {
+      event.preventDefault();
+      setConnexion({
+        ...connexion,
+        isSubmitting: true,
+        errorMessage: null,
+      });
+      const result = await axios.post(
+        `http://localhost:4000/api/signin`,
+        connexion
+      );
+      if (result.status === 200) {
+        console.log("je suis ici ", result.status);
+        return dispatch({ type: "SIGNIN", payload: result });
+      }
+    } catch (error) {
+      setConnexion({
+        ...connexion,
+        isSubmitting: false,
+        errorMessage: error.message || error.statusText,
+      });
+    }
   };
 
   return {
