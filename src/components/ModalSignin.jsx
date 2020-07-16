@@ -52,7 +52,7 @@ export default function ModaleSignin() {
                 Envoyer
               </button>
             </form>
-            <p>
+            <p className="modal-container-paragraphe">
               Nous vous appellerons ou vous enverrons un SMS pour confirmer
               votre numéro. Les frais standards d'envoi de messages et d'échange
               de données s'appliquent.
