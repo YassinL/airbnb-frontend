@@ -1,125 +1,168 @@
-nav {
-    padding: 2%;
-    display: flex;
-    text-align: center;
-    width: 85vw;
-    justify-content: flex-end;
-    align-items: center;
-    ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        text-align: center;
-        @include media(desktop) {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 6.2rem;
-        }
-        @include media(tablet) {
-            margin-right: 10%;
-        }
-        li {
-            padding: 0.3rem;
-            font-weight: 600;
-            color: #2f2222;
-            @include media(desktop) {
-                padding: 1rem;
-                &:hover {
-                    background-color: #f7f7f7;
-                    border-radius: 30px;
-                    cursor: pointer;
-                }
-            }
-            .link {
-                text-decoration: none;
-                color: #2f2222;
-            }
-        }
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  &-container {
+    display: none;
+    @include media(tablet) {
+      display: none;
     }
+    @include media(desktop) {
+      display: flex;
+      width: 20%;
+      height: 20vh;
+    }
+  }
+  nav {
+    background-color: white;
+    padding: 2%;
+    width: 100%;
+    @include media(desktop) {
+      display: flex;
+      padding: 0;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      text-align: center;
+      @include media(desktop) {
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+      }
+      li {
+        padding: 0.3rem;
+        font-weight: 600;
+        color: #2f2222;
+        font-size: 12px;
+        @include media(tablet) {
+          font-size: 18px;
+        }
+        @include media(desktop) {
+          padding: 2%;
+        }
+        .link {
+          text-decoration: none;
+          color: #2f2222;
+        }
+      }
+    }
+  }
 }
 
 .search {
-    display: none;
-    @include media(desktop) {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        z-index: 90;
-        position: relative;
-        background-color: white;
-        border-radius: 10px;
-        border: 1px solid rgb(216, 216, 216);
-        padding: 0.75%;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  display: none;
+  @include media(desktop) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    z-index: 90;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 0.75%;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  }
+  &-label {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid lightgrey;
+    padding: 1% 2%;
+  }
+  &-submit {
+    margin-left: 3%;
+    padding: 0 5%;
+    color: #ffff;
+    border-radius: 15px;
+    cursor: pointer;
+    background-image: radial-gradient(
+      circle at center,
+      #ff385c 0%,
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59 75%,
+      #bd1e59 100%
+    );
+  }
+  input[type="search"] {
+    border: none;
+    cursor: pointer;
+  }
+  input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 20%;
+  }
+  input[type="date"] {
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: attr(placeholder) " : ";
+      white-space: pre;
     }
-    &-label {
-        display: flex;
-        flex-direction: column;
-        border-right: 1px solid lightgrey;
-        padding: 1% 2%;
+    &:focus::before {
+      content: "" !important;
     }
-    &-submit {
-        margin-left: 1%;
-        padding: 0 3%;
-        color: #ffff;
-        border-radius: 15px;
-        cursor: pointer;
-        background-image: radial-gradient( circle at center, #ff385c 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
-    }
-    input[type="search"] {
-        border: none;
-        cursor: pointer;
-    }
-    input[type="submit"] {
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-    }
-    input[type="date"] {
-        border: none;
-        cursor: pointer;
-        &::before {
-            content: attr(placeholder) " : ";
-            white-space: pre;
-        }
-        &:focus::before {
-            content: "" !important;
-        }
-    }
-    input[type="number"] {
-        border: none;
-        cursor: pointer;
-    }
+  }
+  input[type="number"] {
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .searchPhone {
+  display: flex;
+  padding: 5%;
+  @include media(tablet) {
+    width: 80vw;
+  }
+  @include media(desktop) {
+    padding: 0;
+  }
+  &-form {
     display: flex;
-    width: 80%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    @include media(tablet) {
-        margin-left: 12%;
-    }
     @include media(desktop) {
-        display: none;
+      display: none;
     }
     &-inputPhone {
-        border: none;
-        outline: none;
-        z-index: 80;
-        background-color: white;
-        box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.25);
-        width: 90vw;
-        padding: 3% 10%;
-        background: url('../../../src/components/image/search.png') 7px 8px;
-        background-size: 7%;
-        background-repeat: no-repeat;
+      width: 90%;
+      border: none;
+      outline: none;
+      z-index: 80;
+      background-color: white;
+      box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.25);
+
+      padding: 3% 10%;
+      background: url("../../../src/components/image/search.png") 7px 8px;
+      background-size: 7%;
+      background-repeat: no-repeat;
+      @include media(tablet) {
+        width: 70vw;
+      }
     }
+
     &-submit {
-        color: #ffff;
-        padding: 3%;
-        border: none;
-        cursor: pointer;
-        background-image: radial-gradient( circle at center, #ff385c 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
+      color: #ffff;
+      padding: 3%;
+      border: none;
+      cursor: pointer;
+      background-image: radial-gradient(
+        circle at center,
+        #ff385c 0%,
+        #e61e4d 27.5%,
+        #e31c5f 40%,
+        #d70466 57.5%,
+        #bd1e59 75%,
+        #bd1e59 100%
+      );
     }
+  }
 }

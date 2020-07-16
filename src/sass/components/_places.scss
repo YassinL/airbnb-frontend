@@ -14,8 +14,9 @@
   }
   &-map {
     @include media(desktop) {
+      z-index: 9;
       width: 40%;
-      height: 80vh;
+      height: 100vh;
       position: fixed;
       bottom: 0;
       right: 0;

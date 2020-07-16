@@ -1,22 +1,5 @@
 header {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    .container {
-        display: flex;
-        width: 15vw;
-        &-airbnbImg {
-            display: none;
-            @include media(desktop) {
-                display: block;
-                width: 100%;
-            }
-        }
-        @include media(tablet) {
-            display: none;
-            justify-content: flex-start;
-            width: 15vw;
-            padding: 0 2%;
-        }
-    }
+  display: flex;
+  width: 100%;
+  overflow: hidden;
 }

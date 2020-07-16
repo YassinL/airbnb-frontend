@@ -6,6 +6,7 @@ import Search from "./Search";
 import ModalSignup from "./ModalSignup";
 import ModalSignin from "./ModalSignin";
 import ContextRecherche from "./Context/Context";
+import airbnbImage from "./image/airbnb.png";
 
 function Nav(props) {
   const context = useContext(ContextRecherche);
@@ -16,8 +17,15 @@ function Nav(props) {
 
   return (
     <Fragment>
-      <div>
+      <div className="navigation">
         <nav>
+          <div className="navigation-container">
+            <img
+              src={airbnbImage}
+              alt="airbnbImage"
+              className="container-airbnbImg"
+            />
+          </div>
           <ul>
             <li>
               <Link className="link" to="/">

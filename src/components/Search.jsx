@@ -21,58 +21,56 @@ const Search = (props) => {
   };
 
   return (
-
-<div>
-  <form className='searchPhone'>
+    <div className="searchPhone">
+      <form className="searchPhone-form">
         <input
           value={searchValue}
           onChange={handleSearchInputChanges}
           type="search"
           placeholder="Où allez-vous ?"
-          className='searchPhone-inputPhone'
+          className="searchPhone-form-inputPhone"
         />
-         <input
-        onClick={callSearchFunction}
-        type="submit"
-        value="&#10132;"
-        className="searchPhone-submit"
-      />
-  </form>
-
-
-    <form className="search">
-      <label htmlFor="" className="search-label">
-        Adresse
         <input
-          value={searchValue}
-          onChange={handleSearchInputChanges}
-          type="search"
-          placeholder="Où allez-vous ?"
+          onClick={callSearchFunction}
+          type="submit"
+          value="&#10132;"
+          className="searchPhone-form-submit"
         />
-      </label>
+      </form>
 
-      <label htmlFor="" className="search-label">
-        Arrivée
-        <input type="date" placeholder="Date d'arrivée"/>
-      </label>
+      <form className="search">
+        <label htmlFor="" className="search-label">
+          Adresse
+          <input
+            value={searchValue}
+            onChange={handleSearchInputChanges}
+            type="search"
+            placeholder="Où allez-vous ?"
+          />
+        </label>
 
-      <label htmlFor="" className="search-label">
-        Départ
-        <input type="date" placeholder="Date de départ"/>
-      </label>
+        <label htmlFor="" className="search-label">
+          Arrivée
+          <input type="date" placeholder="Date d'arrivée" />
+        </label>
 
-      <label htmlFor="" className="search-label">
-        Voyageurs
-        <input type="number" placeholder="Ajoutez des voyageurs"/>
-      </label>
+        <label htmlFor="" className="search-label">
+          Départ
+          <input type="date" placeholder="Date de départ" />
+        </label>
 
-      <input
-        onClick={callSearchFunction}
-        type="submit"
-        value="Rechercher"
-        className="search-submit"
-      />
-    </form>
+        <label htmlFor="" className="search-label">
+          Voyageurs
+          <input type="number" placeholder="Ajoutez des voyageurs" />
+        </label>
+
+        <input
+          onClick={callSearchFunction}
+          type="submit"
+          value="Rechercher"
+          className="search-submit"
+        />
+      </form>
     </div>
   );
 };
