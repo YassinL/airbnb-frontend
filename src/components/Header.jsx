@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <header>
       <Link to="/">
-        <div className="container-logo">
-          <img src={airbnbImage} alt="airbnbImage" />
+        <div className="container">
+          <img src={airbnbImage} alt="airbnbImage" className='container-airbnbImg'/>
         </div>
       </Link>
       <Nav />
