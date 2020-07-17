@@ -1,0 +1,13 @@
+.addPlaces {
+  display: flex;
+  &-label {
+    display: flex;
+    flex-direction: column;
+    &-select {
+      margin: 3% 0;
+    }
+  }
+  &-image {
+    width: 60vw;
+  }
+}

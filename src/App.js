@@ -9,9 +9,9 @@ import AuthContext from "./components/Context/Auth";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: !!localStorage.getItem("token"),
+  token: localStorage.getItem("token") || {},
   user: null,
-  token: null,
 };
 const reducer = (state, action) => {
   console.log("ICI ACTION :", action);
